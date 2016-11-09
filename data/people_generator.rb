@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 #
 require 'csv'
 require_relative 'date_generator'
 
-name_count = ARGV.length == 0 ? 1219 : ARGV[0].to_i
+name_count = ARGV.empty? ? 1219 : ARGV[0].to_i
 
 date_gen = DateGenerator.new(1940)
 
@@ -49,6 +50,7 @@ CSV.open('people.csv', 'wb',
                surnames.sample,
                person[:given_name],
                person[:gender],
-               date_gen.random_date_string]
+               date_gen.random_date_string
+             ]
            end
          end

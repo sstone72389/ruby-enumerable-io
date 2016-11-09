@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require_relative 'card'
 
 # A simple represenation of a deck of playing cards

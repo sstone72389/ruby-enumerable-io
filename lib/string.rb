@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Add features to string
 class String
   def normalize_words

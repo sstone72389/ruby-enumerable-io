@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 #
 require 'date'
 
@@ -5,7 +6,7 @@ require 'date'
 class DateGenerator
   MINIMUM_YEAR = Date.jd(Date::ENGLAND).year + 1
   MONTHS = (1..12).to_a
-  THIRTY_DAY_MONTHS = [4, 6, 9, 11]
+  THIRTY_DAY_MONTHS = [4, 6, 9, 11].freeze
   DAYS = (1..31).to_a
 
   def initialize(start_year = MINIMUM_YEAR,

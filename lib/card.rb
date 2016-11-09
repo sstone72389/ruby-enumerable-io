@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # A simple representation of a playing card.
 class Card
   SUITS = %w(C D H S).freeze
@@ -6,10 +7,10 @@ class Card
   attr_reader :suit, :rank
 
   def initialize(rank, suit)
-    fail ArgumentError,
-         "Suit: '#{suit}' not in #{SUITS}" unless SUITS.include? suit
-    fail ArgumentError,
-         "Rank: '#{rank}' not in #{RANKS}" unless RANKS.include? rank
+    raise ArgumentError,
+          "Suit: '#{suit}' not in #{SUITS}" unless SUITS.include? suit
+    raise ArgumentError,
+          "Rank: '#{rank}' not in #{RANKS}" unless RANKS.include? rank
 
     @suit = suit
     @rank = rank

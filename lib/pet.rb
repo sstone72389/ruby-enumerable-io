@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'date'
 #
 class Pet
@@ -10,7 +11,7 @@ class Pet
   end
 
   def age
-    born_on = Date.parse(dob)
+    born_on = Date.parse(@dob)
     today = Date.today
     if born_on.month > today.month ||
        born_on.month == today.month && born_on.day >= today.day

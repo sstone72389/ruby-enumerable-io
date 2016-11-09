@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 #
 require 'csv'
 keys = %w(Population Name Country Region Longitude Latitude)
@@ -14,7 +15,7 @@ File.open(ARGV[0] || 'miscfiles/cities.dat') do |file|
     type = fields.last if fields.first == 'Type'
     population = fields.last.to_i if fields.first == 'Population'
     if line == '//'
-      cities << city if type == 'City' && population > 0
+      cities << city if type == 'City' && population.positive?
       city = {}
     elsif keys.include? fields.first
       key = fields.first.downcase

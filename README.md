@@ -20,16 +20,16 @@ In Ruby, files, and all IO streams, are Enumerable.
 
 ## Files as lists
 
-Ruby's [File](http://ruby-doc.org/core-2.3.0/File.html) includes `Enumerable`
-(via its **Parent** class [IO](http://ruby-doc.org/core-2.3.0/IO.html)) so we
+Ruby's [File](http://ruby-doc.org/core-2.3.1/File.html) includes `Enumerable`
+(via its **Parent** class [IO](http://ruby-doc.org/core-2.3.1/IO.html)) so we
 can use all of the Enumerable methods to process files a character or a line
 (the default) at a time.
 
 Other enumerable classes related to working with files include **IO**, mentioned
-above, and [Dir](http://ruby-doc.org/core-2.3.0/Dir.html).
+above, and [Dir](http://ruby-doc.org/core-2.3.1/Dir.html).
 
 We used the Ruby Standard Library class
-[CSV](http://ruby-doc.org/stdlib-2.3.0/libdoc/csv/rdoc/CSV.html) to load data
+[CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html) to load data
 for the `bin/*_array.rb` scripts in
 [/ga-wdi-boston/ruby-vs-js-array-methods](https://github.com/ga-wdi-boston/ruby-vs-js-array-methods).
 
@@ -50,24 +50,24 @@ A file containing Comma Separated Values (CSV) is a simple and well supported
 ### Code along - CSV
 
 We'll build a data loader for pets in `lib/pets.rb` using the Ruby standard
- library class [CSV](http://ruby-doc.org/stdlib-2.3.0/libdoc/csv/rdoc/CSV.html).
+ library class [CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html).
 
 We'll use a `lambda` - shorthand syntax `->([args]) {[code]}`, see
-[Proc](http://ruby-doc.org/core-2.3.0/Proc.html) - to ensure we use properly
+[Proc](http://ruby-doc.org/core-2.3.1/Proc.html) - to ensure we use properly
 formatted symbols as keys when loading data.  In Ruby, lambdas verify the number
 of arguments.  Alternatively, we could pass a symbol from
-[HeaderConverters](http://ruby-doc.org/stdlib-2.3.0/libdoc/csv/rdoc/CSV.html#HeaderConverters)
+[HeaderConverters](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html#HeaderConverters)
 as the value for `:header_converters` in the options Hash.
 
 ## Challenge
 
 Read two files at the same time using `bin/read_files.rb`.
 
-Look at [Enumerator](http://ruby-doc.org/core-2.3.0/Enumerator.html) which is
+Look at [Enumerator](http://ruby-doc.org/core-2.3.1/Enumerator.html) which is
  what gets returned when we call `each` on an open file without a block.
 
 We'll need to look briefly at [exception
-handling](http://ruby-doc.org/core-2.3.0/Exception.html) as Enumerator relies on
+handling](http://ruby-doc.org/core-2.3.1/Exception.html) as Enumerator relies on
 this mechanism.
 
 ## Tasks

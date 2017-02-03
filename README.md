@@ -107,6 +107,19 @@ We'll need to look briefly at [exception
 handling](http://ruby-doc.org/core-2.3.1/Exception.html) as Enumerator relies
 on this mechanism.
 
+## Challenge - Annotate unfamiliar code
+
+1.  Annotate [`lib/people.rb`](lib/people.rb) if you haven't already.
+1.  Annotate [`lib/person.rb`](lib/person.rb). Start with annotating what you
+    can easily annotate. Then, methodically and actively reading the difficult
+    portions, annotate each remaining line.
+1.  Annotate [`lib/pets.rb`](lib/pets.rb) if you haven't already.
+1.  Annotate [`lib/pets.rb`](lib/pets.rb). Start with annotating what you can
+    easily annotate. Then, methodically and actively reading the difficult
+    portions, annotate each remaining line.
+1.  Compare and contrast the person files as a group with the pet files as a
+    group.
+
 ## Tasks
 
 Developers should run these often!

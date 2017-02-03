@@ -28,7 +28,9 @@ By the end of this lesson, developers should be able to:
 
 ## Introduction
 
-In Ruby, files, and all IO streams, are Enumerable.
+In Ruby, files, and all IO streams, are Enumerable. You're familiar with files
+and folders. Examples of IO streams, other than files, are `stdin`, `stdout`,
+and `stderror`.
 
 ## Files as lists
 

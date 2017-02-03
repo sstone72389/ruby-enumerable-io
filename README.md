@@ -47,12 +47,13 @@ abstraction for working with directory structures.
 
 ## Code along - read a file
 
-Using `bin/read_file.rb` we'll read all the lines in a file and print them.
+Using [`bin/read_file.rb`](bin/read_file.rb) we'll read all the lines in a file
+and print them.
 
 ## Lab - count characters, words, and lines in a file
 
 Let's create a script to mimic the behavior of the `wc` (word count) command
-line utility in `bin/word_count.rb`.
+line utility in [`bin/word_count.rb`](bin/word_count.rb).
 
 ## Files in the CSV format
 
@@ -77,16 +78,16 @@ We previously used the Ruby class
 for us. The CSV class is part of the standard library, which means that we can
 use it without downloading a gem.
 
-We used CSV for the `bin/people_array.rb` script in [Ruby Array
-Methods](https://github.com/ga-wdi-boston/ruby-array-methods).
+We used CSV for the [`bin/people_array.rb`](bin/people_array.rb) script in
+[Ruby Array Methods](https://github.com/ga-wdi-boston/ruby-array-methods).
 
-1.  Watch as I run `bin/people_array.rb`
+1.  Watch as I run [`bin/people_array.rb`](bin/people_array.rb).
 1.  Note how I inspect the files associated with the script, specifically
     looking for how the `CSV` class is used.
 
 ## Code along - CSV
 
-We'll build a data loader for pets in `lib/pets.rb` using
+We'll build a data loader for pets in [`lib/pets.rb`](lib/pets.rb') using
 [CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html).
 
 We'll use a `lambda` - shorthand syntax `->([args]) {[code]}`, see
@@ -98,7 +99,7 @@ as the value for `:header_converters` in the options Hash.
 
 ## Challenge - Read two files simultaneously
 
-Read two files at the same time using `bin/read_files.rb`.
+Read two files at the same time using [`bin/read_files.rb`](bin/read_files.r).
 
 Look at [Enumerator](http://ruby-doc.org/core-2.3.1/Enumerator.html) which is
 what gets returned when we call `each` on an open file without a block.

@@ -18,6 +18,14 @@ By the end of this lesson, developers should be able to:
 -   Explain why you should only use the block form of `File.open`.
 -   Load data using the CSV library in order to create Ruby objects.
 
+## Preparation
+
+1.  Fork and clone this repository.
+    [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Create a new branch, `training`, for your work.
+1.  Checkout to the `training` branch.
+1.  Install dependencies with `bundle install`.
+
 ## Introduction
 
 In Ruby, files, and all IO streams, are Enumerable.

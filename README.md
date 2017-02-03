@@ -54,6 +54,22 @@ Using `bin/read_file.rb` we'll read all the lines in a file and print them.
 Let's create a script to mimic the behavior of the `wc` (word count) command
 line utility in `bin/word_count.rb`.
 
+## Files in the CSV format
+
+A file containing Comma Separated Values (CSV) is a simple and well supported
+format for data interchange, especially for tabular data. It is an open format
+describing plain text (data) separated by commas. It may or may not have a
+"header" as the first line, describing "columns" of data. Each piece of data
+is represented as a "row".
+
+## Demo - Inspect a CSV file
+
+Tabular data, columns, and rows? We're dealing with a spreadsheet (without
+formulas). There is an example in [`data/people.csv`](data/people.csv).
+
+1.  Watch as I open the file in my text editor.
+1.  Watch as I open the file in a spreadsheet program.
+
 ## Demo - CSV class
 
 We previously used the Ruby class
@@ -67,11 +83,6 @@ Methods](https://github.com/ga-wdi-boston/ruby-array-methods).
 1.  Watch as I run `bin/people_array.rb`
 1.  Note how I inspect the files associated with the script, specifically
     looking for how the `CSV` class is used.
-
-## CSV files
-
-A file containing Comma Separated Values (CSV) is a simple and well supported
- format for data interchange, especially for tabular data.
 
 ### Code along - CSV
 

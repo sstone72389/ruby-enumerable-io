@@ -61,8 +61,12 @@ We previously used the Ruby class
 for us. The CSV class is part of the standard library, which means that we can
 use it without downloading a gem.
 
-We used CSV for the `bin/*_array.rb` scripts in [Ruby Array
+We used CSV for the `bin/people_array.rb` script in [Ruby Array
 Methods](https://github.com/ga-wdi-boston/ruby-array-methods).
+
+1.  Watch as I run `bin/people_array.rb`
+1.  Note how I inspect the files associated with the script, specifically
+    looking for how the `CSV` class is used.
 
 ## CSV files
 

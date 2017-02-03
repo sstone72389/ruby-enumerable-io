@@ -84,15 +84,15 @@ Methods](https://github.com/ga-wdi-boston/ruby-array-methods).
 1.  Note how I inspect the files associated with the script, specifically
     looking for how the `CSV` class is used.
 
-### Code along - CSV
+## Code along - CSV
 
-We'll build a data loader for pets in `lib/pets.rb` using the Ruby standard
- library class [CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html).
+We'll build a data loader for pets in `lib/pets.rb` using
+[CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html).
 
 We'll use a `lambda` - shorthand syntax `->([args]) {[code]}`, see
 [Proc](http://ruby-doc.org/core-2.3.1/Proc.html) - to ensure we use properly
-formatted symbols as keys when loading data.  In Ruby, lambdas verify the number
-of arguments.  Alternatively, we could pass a symbol from
+formatted symbols as keys when loading data.  In Ruby, lambdas verify the
+number of arguments.  Alternatively, we could pass a symbol from
 [HeaderConverters](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html#HeaderConverters)
 as the value for `:header_converters` in the options Hash.
 
@@ -101,11 +101,11 @@ as the value for `:header_converters` in the options Hash.
 Read two files at the same time using `bin/read_files.rb`.
 
 Look at [Enumerator](http://ruby-doc.org/core-2.3.1/Enumerator.html) which is
- what gets returned when we call `each` on an open file without a block.
+what gets returned when we call `each` on an open file without a block.
 
 We'll need to look briefly at [exception
-handling](http://ruby-doc.org/core-2.3.1/Exception.html) as Enumerator relies on
-this mechanism.
+handling](http://ruby-doc.org/core-2.3.1/Exception.html) as Enumerator relies
+on this mechanism.
 
 ## Tasks
 

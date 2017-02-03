@@ -9,6 +9,9 @@ date_gen = DateGenerator.new(1940)
 
 surnames = []
 
+# move into the data directoy
+Dir.chdir(File.dirname(__FILE__))
+
 File.open('census/surname.txt') do |file|
   file.each_with_index do |line, index|
     surnames << line.split.first.capitalize if index < name_count

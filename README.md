@@ -2,9 +2,13 @@
 
 # Ruby Enumerable IO
 
-## Instructions
+## Prerequisites
 
-Fork, clone, branch (training), and bundle install.
+-   [Ruby Enumerable
+    Built-ins](https://github.com/ga-wdi-boston/ruby-enumerable-builtins)
+-   [Ruby Object](https://github.com/ga-wdi-boston/ruby-object)
+-   [Ruby Object Model](https://github.com/ga-wdi-boston/ruby-object-model)
+-   [Ruby Object: `self`](https://github.com/ga-wdi-boston/ruby-object-self)
 
 ## Objectives
 

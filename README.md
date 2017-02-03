@@ -2,9 +2,13 @@
 
 # Ruby Enumerable IO
 
-## Instructions
+## Prerequisites
 
-Fork, clone, branch (training), and bundle install.
+-   [Ruby Enumerable
+    Built-ins](https://github.com/ga-wdi-boston/ruby-enumerable-builtins)
+-   [Ruby Object](https://github.com/ga-wdi-boston/ruby-object)
+-   [Ruby Object Model](https://github.com/ga-wdi-boston/ruby-object-model)
+-   [Ruby Object: `self`](https://github.com/ga-wdi-boston/ruby-object-self)
 
 ## Objectives
 
@@ -14,69 +18,122 @@ By the end of this lesson, developers should be able to:
 -   Explain why you should only use the block form of `File.open`.
 -   Load data using the CSV library in order to create Ruby objects.
 
+## Preparation
+
+1.  Fork and clone this repository.
+    [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Create a new branch, `training`, for your work.
+1.  Checkout to the `training` branch.
+1.  Install dependencies with `bundle install`.
+
 ## Introduction
 
-In Ruby, files, and all IO streams, are Enumerable.
+In Ruby, files, and all IO streams, are Enumerable. You're familiar with files
+and folders. Examples of IO streams, other than files, are `stdin`, `stdout`,
+and `stderror`.
 
 ## Files as lists
 
-Ruby's [File](http://ruby-doc.org/core-2.3.1/File.html) includes `Enumerable`
-(via its **Parent** class [IO](http://ruby-doc.org/core-2.3.1/IO.html)) so we
-can use all of the Enumerable methods to process files a character or a line
-(the default) at a time.
+Ruby's [File](http://ruby-doc.org/core-2.3.1/File.html) type mixes-in
+Enumerable via its parent class, [IO](http://ruby-doc.org/core-2.3.1/IO.html)).
+Therefore, we can use all of the Enumerable methods to process files. That
+means, to Ruby at least, files are just lists, and we can process them in
+chunks, either a character or a line at a time. By default, Ruby will process
+files one line at a time.
 
-Other enumerable classes related to working with files include **IO**, mentioned
-above, and [Dir](http://ruby-doc.org/core-2.3.1/Dir.html).
+Other enumerable classes related to working with files include IO (mentioned
+above) and [Dir](http://ruby-doc.org/core-2.3.1/Dir.html). Dir is Ruby's
+abstraction for working with directory structures.
 
-We used the Ruby Standard Library class
-[CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html) to load data
-for the `bin/*_array.rb` scripts in
-[/ga-wdi-boston/ruby-vs-js-array-methods](https://github.com/ga-wdi-boston/ruby-vs-js-array-methods).
+## Code along - read a file
 
-### Code along - read a file
+Using [`bin/read_file.rb`](bin/read_file.rb) we'll read all the lines in a file
+and print them.
 
-Using `bin/read_file.rb` we'll read all the lines in a file and print them.
-
-### Lab - count characters, words, and lines in a file
+## Lab - count characters, words, and lines in a file
 
 Let's create a script to mimic the behavior of the `wc` (word count) command
- line utility in `bin/word_count.rb`.
+line utility in [`bin/word_count.rb`](bin/word_count.rb).
 
-## CSV files
+## Files in the CSV format
 
 A file containing Comma Separated Values (CSV) is a simple and well supported
- format for data interchange, especially for tabular data.
+format for data interchange, especially for tabular data. It is an open format
+describing plain text (data) separated by commas. It may or may not have a
+"header" as the first line, describing "columns" of data. Each piece of data
+is represented as a "row".
 
-### Code along - CSV
+## Demo - Inspect a CSV file
 
-We'll build a data loader for pets in `lib/pets.rb` using the Ruby standard
- library class [CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html).
+Tabular data, columns, and rows? We're dealing with a spreadsheet (without
+formulas). There is an example in [`data/people.csv`](data/people.csv).
 
-We'll use a `lambda` - shorthand syntax `->([args]) {[code]}`, see
-[Proc](http://ruby-doc.org/core-2.3.1/Proc.html) - to ensure we use properly
-formatted symbols as keys when loading data.  In Ruby, lambdas verify the number
-of arguments.  Alternatively, we could pass a symbol from
+1.  Watch as I open the file in my text editor.
+1.  Watch as I open the file in a spreadsheet program.
+
+## Demo - CSV class
+
+We previously used the Ruby class
+[CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html) to load data
+for us. The CSV class is part of the standard library, which means that we can
+use it without downloading a gem.
+
+We used CSV for the [`bin/people_array.rb`](bin/people_array.rb) script in
+[Ruby Array Methods](https://github.com/ga-wdi-boston/ruby-array-methods).
+
+1.  Watch as I run [`bin/people_array.rb`](bin/people_array.rb).
+1.  Note how I inspect the files associated with the script, specifically
+    looking for how the `CSV` class is used.
+
+## Code along - CSV
+
+We'll build a data loader for pets in [`lib/pets.rb`](lib/pets.rb') using
+[CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html).
+
+We'll use a `lambda` to ensure we use properly formatted symbols as keys when
+loading data. We'll use the shorthand syntax, sometimes called the "stabby"
+lambda, `->([args]) {[code]}`.
+
+A `lambda` in Ruby is the closest thing to an anonymous function
+that we have. Ruby lambdas verify arity do not stop execution during their
+return; they are different from Procs in that regard ([Proc docs](http://ruby-doc.org/core-2.3.1/Proc.html)).
+
+Instead of using a lambda to convert our headers, we could pass a symbol from
 [HeaderConverters](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html#HeaderConverters)
 as the value for `:header_converters` in the options Hash.
 
-## Challenge
+## Challenge - Read two files simultaneously
 
-Read two files at the same time using `bin/read_files.rb`.
+Read two files at the same time using [`bin/read_files.rb`](bin/read_files.r).
 
 Look at [Enumerator](http://ruby-doc.org/core-2.3.1/Enumerator.html) which is
- what gets returned when we call `each` on an open file without a block.
+what gets returned when we call `each` on an open file without a block.
 
 We'll need to look briefly at [exception
-handling](http://ruby-doc.org/core-2.3.1/Exception.html) as Enumerator relies on
-this mechanism.
+handling](http://ruby-doc.org/core-2.3.1/Exception.html) as Enumerator relies
+on this mechanism.
+
+## Challenge - Annotate unfamiliar code
+
+1.  Annotate [`lib/people.rb`](lib/people.rb) if you haven't already.
+1.  Annotate [`lib/person.rb`](lib/person.rb). Start with annotating what you
+    can easily annotate. Then, methodically and actively reading the difficult
+    portions, annotate each remaining line.
+1.  Annotate [`lib/pets.rb`](lib/pets.rb) if you haven't already.
+1.  Annotate [`lib/pets.rb`](lib/pets.rb). Start with annotating what you can
+    easily annotate. Then, methodically and actively reading the difficult
+    portions, annotate each remaining line.
+1.  Compare and contrast the person files as a group with the pet files as a
+    group.
 
 ## Tasks
 
 Developers should run these often!
 
--   `bin/rake nag`  (or `bundle exec rake test`):
+-   `bin/rake nag`  (or `bundle exec rake nag`):
     runs code quality analysis tools on your code and complains.
--   `bin/rake test` (or `bundle exec rake test`): runs automated tests
+-   `bin/rake test` (or `bundle exec rake test`): runs automated tests.
+-   `bin/rake` will run both `nag` and `test`
 
 ## [License](LICENSE)
 

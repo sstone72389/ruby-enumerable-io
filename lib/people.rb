@@ -8,7 +8,7 @@ class People
     @people = []
     CSV.foreach('data/people.csv',
                 headers: true,
-                header_converters: -> (h) { h.downcase.to_sym }) do |person|
+                header_converters: ->(h) { h.downcase.to_sym }) do |person|
       @people << Person.new(person.to_hash)
     end
   end

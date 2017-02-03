@@ -23,10 +23,11 @@ File.open('census/female.txt') do |file|
   file.each_with_index do |line, index|
     given_name = line.split.first.capitalize
     gender = gender_neutral.include?(given_name) ? 'o' : 'f'
+    next if index > name_count
     people << {
       given_name: given_name,
       gender: gender
-    } if index < name_count
+    }
   end
 end
 
@@ -34,10 +35,11 @@ File.open('census/male.txt') do |file|
   file.each_with_index do |line, index|
     given_name = line.split.first.capitalize
     gender = gender_neutral.include?(given_name) ? 'o' : 'm'
+    next if index > name_count
     people << {
       given_name: given_name,
       gender: gender
-    } if index < name_count
+    }
   end
 end
 

@@ -34,13 +34,16 @@ and `stderror`.
 
 ## Files as lists
 
-Ruby's [File](http://ruby-doc.org/core-2.3.1/File.html) includes `Enumerable`
-(via its **Parent** class [IO](http://ruby-doc.org/core-2.3.1/IO.html)) so we
-can use all of the Enumerable methods to process files a character or a line
-(the default) at a time.
+Ruby's [File](http://ruby-doc.org/core-2.3.1/File.html) type mixes-in
+Enumerable via its parent class, [IO](http://ruby-doc.org/core-2.3.1/IO.html)).
+Therefore, we can use all of the Enumerable methods to process files. That
+means, to Ruby at least, files are just lists, and we can process them in
+chunks, either a character or a line at a time. By default, Ruby will process
+files one line at a time.
 
-Other enumerable classes related to working with files include **IO**, mentioned
-above, and [Dir](http://ruby-doc.org/core-2.3.1/Dir.html).
+Other enumerable classes related to working with files include IO (mentioned
+above) and [Dir](http://ruby-doc.org/core-2.3.1/Dir.html). Dir is Ruby's
+abstraction for working with directory structures.
 
 We used the Ruby Standard Library class
 [CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html) to load data

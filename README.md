@@ -96,7 +96,7 @@ number of arguments.  Alternatively, we could pass a symbol from
 [HeaderConverters](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html#HeaderConverters)
 as the value for `:header_converters` in the options Hash.
 
-## Challenge
+## Challenge - Read two files simultaneously
 
 Read two files at the same time using `bin/read_files.rb`.
 

@@ -59,9 +59,10 @@ line utility in `bin/word_count.rb`.
 We previously used the Ruby class
 [CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html) to load data
 for us. The CSV class is part of the standard library, which means that we can
-use it without downloading a gem. We used CSV for the `bin/*_array.rb`
-scripts in
-[/ga-wdi-boston/ruby-vs-js-array-methods](https://github.com/ga-wdi-boston/ruby-vs-js-array-methods).
+use it without downloading a gem.
+
+We used CSV for the `bin/*_array.rb` scripts in [Ruby Array
+Methods](https://github.com/ga-wdi-boston/ruby-array-methods).
 
 ## CSV files
 

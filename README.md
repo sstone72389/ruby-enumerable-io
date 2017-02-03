@@ -90,10 +90,15 @@ We used CSV for the [`bin/people_array.rb`](bin/people_array.rb) script in
 We'll build a data loader for pets in [`lib/pets.rb`](lib/pets.rb') using
 [CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html).
 
-We'll use a `lambda` - shorthand syntax `->([args]) {[code]}`, see
-[Proc](http://ruby-doc.org/core-2.3.1/Proc.html) - to ensure we use properly
-formatted symbols as keys when loading data.  In Ruby, lambdas verify the
-number of arguments.  Alternatively, we could pass a symbol from
+We'll use a `lambda` to ensure we use properly formatted symbols as keys when
+loading data. We'll use the shorthand syntax, sometimes called the "stabby"
+lambda, `->([args]) {[code]}`.
+
+A `lambda` in Ruby is the closest thing to an anonymous function
+that we have. Ruby lambdas verify arity do not stop execution during their
+return; they are different from Procs in that regard ([Proc docs](http://ruby-doc.org/core-2.3.1/Proc.html)).
+
+Instead of using a lambda to convert our headers, we could pass a symbol from
 [HeaderConverters](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html#HeaderConverters)
 as the value for `:header_converters` in the options Hash.
 

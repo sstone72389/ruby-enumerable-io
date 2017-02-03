@@ -45,19 +45,23 @@ Other enumerable classes related to working with files include IO (mentioned
 above) and [Dir](http://ruby-doc.org/core-2.3.1/Dir.html). Dir is Ruby's
 abstraction for working with directory structures.
 
-We used the Ruby Standard Library class
-[CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html) to load data
-for the `bin/*_array.rb` scripts in
-[/ga-wdi-boston/ruby-vs-js-array-methods](https://github.com/ga-wdi-boston/ruby-vs-js-array-methods).
-
-### Code along - read a file
+## Code along - read a file
 
 Using `bin/read_file.rb` we'll read all the lines in a file and print them.
 
-### Lab - count characters, words, and lines in a file
+## Lab - count characters, words, and lines in a file
 
 Let's create a script to mimic the behavior of the `wc` (word count) command
- line utility in `bin/word_count.rb`.
+line utility in `bin/word_count.rb`.
+
+## Demo - CSV class
+
+We previously used the Ruby class
+[CSV](http://ruby-doc.org/stdlib-2.3.1/libdoc/csv/rdoc/CSV.html) to load data
+for us. The CSV class is part of the standard library, which means that we can
+use it without downloading a gem. We used CSV for the `bin/*_array.rb`
+scripts in
+[/ga-wdi-boston/ruby-vs-js-array-methods](https://github.com/ga-wdi-boston/ruby-vs-js-array-methods).
 
 ## CSV files
 
